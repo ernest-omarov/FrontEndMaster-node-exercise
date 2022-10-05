@@ -1,3 +1,4 @@
+const { json } = require("body-parser");
 const express = require("express");
 const path = require("path");
 
@@ -13,9 +14,23 @@ const complements = [
   "You've learned a lot of things, and that's pretty hard to do"
 ];
 
+const insult = [
+  "PIE-EATING PR*CK PIRATE",
+  "C0MMUN1ST DOUCHE CAPTAIN",
+  "SLIMY BUTT HAMMER",
+  "JACKALOPE TAINT TOOLBAG",
+  "BUTTERFACE DOUCHE BOX",
+  "WH1TE TRASH SPHINCTER CAPTAIN"
+];
+
 function getRandomComplement() {
   const randomIndex = Math.floor(Math.random() * complements.length);
   return complements[randomIndex];
+}
+
+function getRandomInsult() {
+  const randomIndex = Math.floor(Math.random() * insult.length);
+  return insult[randomIndex];
 }
 
 const app = express();
@@ -28,6 +43,14 @@ app.get("/complement", function(req, res) {
   res
     .json({
       complement: getRandomComplement()
+    })
+    .end();
+});
+
+app.get("/insult", function(req,res){
+  res
+    .json({
+      insult: getRandomInsult()
     })
     .end();
 });
