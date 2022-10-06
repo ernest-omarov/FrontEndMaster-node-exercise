@@ -33,6 +33,7 @@ function getRandomInsult() {
   return insult[randomIndex];
 }
 
+
 const app = express();
 
 app.get("/", function(req, res) {
