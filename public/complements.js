@@ -1,6 +1,7 @@
 document
   .querySelector(".request-complement")
   .addEventListener("click", function() {
+    document.querySelector('.complement').style.color = "green"
     fetch("/complement")
       .then(function(res) {
         return res.json();

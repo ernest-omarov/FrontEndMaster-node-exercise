@@ -1,3 +1,46 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.request-insult {
   background-color: black;
+  color: red;
+  margin: 0px 70px;
+}
+
+.request-insult:hover {
+  background-color: #404040;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.request-complement {
+  background-color: black;
+  color: green;
+}
+
+.request-complement:hover {
+  background-color: #404040;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.complement {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  margin-bottom: 50px;
 }
